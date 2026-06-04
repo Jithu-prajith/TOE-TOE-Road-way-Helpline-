@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toe Toe – Your Highway Helpline | Citizen-Powered Roadside Assistance India</title>
+    
+    <!-- Meta Descriptions -->
+    <meta name="description" content="Toe Toe is a citizen-powered roadside assistance ecosystem for Indian highways. Instantly connect with nearby passing travelers, residents, and gig workers for breakdowns, punctures, and fuel shortages.">
+    <meta name="keywords" content="highway safety, roadside assistance, towing india, car breakdown, tyre puncture, fuel emergency, community help, NH-44 emergency">
+    
+    <!-- CSS Stylings -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Google Fonts & Icon Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- --- FLOATING HEADER / NAVBAR --- -->
+    <header class="header" id="mainHeader">
+        <div class="container">
+            <a href="#" class="logo">
+                <div class="logo-brand-box" title="TOTO - We're with you, mile after mile">
+                    <img src="logo.jpg" alt="TOTO Logo">
+                </div>
+                TOTO<span class="logo-dot"></span><span class="logo-highway">Helpline</span>
+            </a>
+            
+            <nav class="navbar">
+                <a href="#problem" class="nav-link">The Problem</a>
+                <a href="#about" class="nav-link">About Us</a>
+                <a href="#helpers" class="nav-link">Our Helpers</a>
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="#simulator" class="nav-link" style="color: var(--color-primary); font-weight: 700;">Live Demo Portal</a>
+            </nav>
+            
+            <div class="nav-cta">
+                <button class="btn btn-outline btn-sm" id="btnHeaderLogin">Login / Sign Up</button>
+                <a href="#simulator" class="btn btn-primary btn-sm">Request Help</a>
+            </div>
+            
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- --- HERO SECTION --- -->
+    <section class="hero" id="home">
+        <div class="hero-bg-graphic"></div>
+        <div class="hero-highway-lines"></div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <span class="badge badge-primary hero-badge">
+                    <i class="fa-solid fa-shield-halved"></i> Verified Highway Rescue Network
+                </span>
+                <h1>Toe Toe – Your <span class="text-gradient-orange">Highway Helpline</span></h1>
+                <p>Connecting stranded travelers with nearby helpers across Indian highways—because no family should feel stuck, alone, or unsafe in the middle of nowhere.</p>
+                
+                <div class="hero-actions">
+                    <a href="#simulator" class="btn btn-primary">
+                        <i class="fa-solid fa-triangle-exclamation"></i> Request Helpline Support
+                    </a>
+                    <button class="btn btn-secondary" id="btnHeroBecomeHelper">
+                        <i class="fa-solid fa-handshake"></i> Become a Helper
+                    </button>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">12<span>+</span></span>
+                        <span class="stat-label">National Highways Covered</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">45k<span>+</span></span>
+                        <span class="stat-label">Active Highway Citizens</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">14<span>Mins</span></span>
+                        <span class="stat-label">Average Assistance Time</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Hero Dashboard Simulator Preview Widget -->
+            <div class="hero-visual">
+                <div class="radar-pulse-ring"></div>
+                <div class="radar-pulse-ring-2"></div>
+                <div class="visual-container glass-panel hero-mock-dashboard">
+                    <div class="mock-header">
+                        <span class="badge badge-primary"><i class="fa-solid fa-circle-dot"></i> Live GPS Network</span>
+                        <span class="mock-dot"></span>
+                    </div>
+                    <div class="mock-card">
+                        <div class="mock-row">
+                            <span class="mock-label">Stranded Traveler</span>
+                            <span class="mock-val">Amit Sharma & Family</span>
+                        </div>
+                        <div class="mock-row">
+                            <span class="mock-label">Highway Route</span>
+                            <span class="mock-val">NH-44 (near Mathura)</span>
+                        </div>
+                        <div class="mock-row">
+                            <span class="mock-label">Emergency Category</span>
+                            <span class="mock-val" style="color: var(--color-danger);"><i class="fa-solid fa-screwdriver-wrench"></i> Tyre Puncture</span>
+                        </div>
+                    </div>
+                    <div class="mock-card">
+                        <div class="mock-row">
+                            <span class="mock-label">Assigned Helper</span>
+                            <span class="mock-val">Vikram Singh (Local Citizen)</span>
+                        </div>
+                        <div class="mock-row">
+                            <span class="mock-label">Current Distance</span>
+                            <span class="mock-val" style="color: var(--color-primary);">1.8 km (En Route)</span>
+                        </div>
+                    </div>
+                    <div class="mock-row" style="font-size: 0.75rem; color: var(--color-text-muted);">
+                        <span>GPS Scanning Active...</span>
+                        <span>Estimated Arrival: 4 Mins</span>
+                    </div>
+                    <div class="mock-pulse-bar" style="margin-top: 0.5rem;">
+                        <div class="mock-pulse-bar-fill"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- THE PROBLEM SECTION --- -->
+    <section class="section section-alt" id="problem">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge badge-warning">The Critical Gap</span>
+                <h2>Stranded On Indian Highways?</h2>
+                <p>Getting stuck on long national routes is a major safety risk. Professional roadside networks take hours, and traditional mechanics are miles away.</p>
+            </div>
+            
+            <div class="problem-grid">
+                <div class="problem-item glass-panel">
+                    <div class="problem-icon-wrap">
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                    </div>
+                    <div class="problem-info">
+                        <h3>No Nearby Mechanic Shops</h3>
+                        <p>Highways span thousands of kilometers of isolated fields. Finding a workshop in rural patches or during late hours is nearly impossible.</p>
+                    </div>
+                </div>
+                
+                <div class="problem-item glass-panel">
+                    <div class="problem-icon-wrap">
+                        <i class="fa-solid fa-gas-pump"></i>
+                    </div>
+                    <div class="problem-info">
+                        <h3>Fuel Shortages & Empty Tanks</h3>
+                        <p>Miscalculating range between massive highway petrol pumps can strand families without fuel, miles away from the next fuel pump.</p>
+                    </div>
+                </div>
+                
+                <div class="problem-item glass-panel">
+                    <div class="problem-icon-wrap">
+                        <i class="fa-solid fa-wrench"></i>
+                    </div>
+                    <div class="problem-info">
+                        <h3>Tyre Blowouts & Punctures</h3>
+                        <p>Raveling over sharp potholes causes sudden tyre blowouts. Many travelers lack a spare tyre, a working jack, or the physical strength to change it.</p>
+                    </div>
+                </div>
+                
+                <div class="problem-item glass-panel">
+                    <div class="problem-icon-wrap">
+                        <i class="fa-solid fa-user-lock"></i>
+                    </div>
+                    <div class="problem-info">
+                        <h3>Unsafe Isolated Roads</h3>
+                        <p>Waiting in darkness on isolated dark highways exposes families to local security hazards, intense night heat, or severe highway elements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- WHAT IS TOE TOE --- -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="about-block">
+                <div class="about-content">
+                    <span class="badge badge-primary">Our Core Concept</span>
+                    <h2>A Citizen-Powered Roadside Ecosystem</h2>
+                    <p>Toe Toe represents a paradigm shift. We do not connect you to distant, commercial mechanic garages. Instead, we leverage the power of the <strong>highway community</strong>.</p>
+                    <p>Using real-time GPS location and quick emergency notifications, we connect stranded travelers directly to verified citizens who are just minutes away.</p>
+                    
+                    <div class="about-features">
+                        <div class="about-feature-item">
+                            <div class="feature-dot"></div>
+                            <div class="about-feature-info">
+                                <h4>Passing Highway Travelers</h4>
+                                <p>Help fellow drivers going on the same route with tools, jump-start, or extra spares.</p>
+                            </div>
+                        </div>
+                        <div class="about-feature-item">
+                            <div class="feature-dot"></div>
+                            <div class="about-feature-info">
+                                <h4>Local Villagers & Dhabas</h4>
+                                <p>Residents familiar with rural geography who can procure fuel or help navigate locally.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-graphic glass-panel">
+                    <div class="about-shield"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <h3>Community Trust & Speed</h3>
+                    <p class="about-quote">"Because no one on a highway should be left to handle an emergency alone. We stand by each other."</p>
+                    <p style="color: var(--color-text-secondary); font-size: 0.9rem;">By enabling everyday active citizens to participate, we make emergency highway care hyper-fast, affordable, and warm-spirited.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- WHO ARE THE HELPERS --- -->
+    <section class="section section-alt" id="helpers">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge badge-success">Socio-Economic Impact</span>
+                <h2>Meet Your Everyday Helpers</h2>
+                <p>Toe Toe coordinates three highly supportive segments of verified active citizens nearby to secure your journey.</p>
+            </div>
+            
+            <div class="helper-grid">
+                <!-- Helper 1 -->
+                <div class="helper-card glass-panel">
+                    <div class="helper-avatar-container">
+                        <i class="icon fa-solid fa-car"></i>
+                        <span class="helper-badge-inner"><i class="fa-solid fa-check"></i></span>
+                    </div>
+                    <h3>Passing Travelers</h3>
+                    <p>Fellow drivers willing to spare tools, a step-down tyre, or a jump-start cable to help you move.</p>
+                    <span class="helper-desc-highlight">"Fellow highway users willing to help"</span>
+                </div>
+                
+                <!-- Helper 2 -->
+                <div class="helper-card glass-panel">
+                    <div class="helper-avatar-container">
+                        <i class="icon fa-solid fa-house-chimney"></i>
+                        <span class="helper-badge-inner"><i class="fa-solid fa-check"></i></span>
+                    </div>
+                    <h3>Local Residents</h3>
+                    <p>People living near highway junctions, toll plazas, or dhabas who can fetch support from nearby villages.</p>
+                    <span class="helper-desc-highlight">"People near highways familiar with the area"</span>
+                </div>
+                
+                <!-- Helper 3 -->
+                <div class="helper-card glass-panel">
+                    <div class="helper-avatar-container">
+                        <i class="icon fa-solid fa-motorcycle"></i>
+                        <span class="helper-badge-inner"><i class="fa-solid fa-check"></i></span>
+                    </div>
+                    <h3>Gig Workers</h3>
+                    <p>Registered citizens looking to earn fair secondary income by rapidly delivering petrol or punctured tyre kits.</p>
+                    <span class="helper-desc-highlight">"Citizens looking to earn while helping travelers"</span>
+                </div>
+            </div>
+            
+            <!-- VERIFICATION MANDATORY DISCLAIMER -->
+            <div class="verification-banner">
+                <div class="icon-check"><i class="fa-solid fa-shield"></i></div>
+                <p><strong>Safety is our absolute priority.</strong> All helper profiles are verified using <span>Aadhaar KYC checks</span>, background verifications, and mobile matching prior to dashboard activation.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- HOW TOE TOE WORKS --- -->
+    <section class="section" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge badge-primary">Ecosystem Timeline</span>
+                <h2>How Toe Toe Works</h2>
+                <p>A simple 5-step digital lifecycle ensuring swift, transparent assistance in minutes.</p>
+            </div>
+            
+            <div class="timeline timeline-clearfix">
+                <!-- Step 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <span class="timeline-num">01</span>
+                    <div class="timeline-content glass-panel">
+                        <h3>1. Traveler requests help</h3>
+                        <p>Open the app, select your emergency (Breakdown, Puncture, Fuel), and share your automated GPS highway coordinates.</p>
+                    </div>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <span class="timeline-num">02</span>
+                    <div class="timeline-content glass-panel">
+                        <h3>2. Helpers receive notification</h3>
+                        <p>Our intelligent system broadcasts the request to registered and verified citizens within a 10 km radar radius.</p>
+                    </div>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <span class="timeline-num">03</span>
+                    <div class="timeline-content glass-panel">
+                        <h3>3. Helper accepts request</h3>
+                        <p>An active helper accepts the job, visualizes your location, and begins navigating toward your live GPS pinpoint.</p>
+                    </div>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <span class="timeline-num">04</span>
+                    <div class="timeline-content glass-panel">
+                        <h3>4. Assistance is provided</h3>
+                        <p>The helper arrives at your vehicle, delivers fuel, changes the tyre, or helps tow your car to safety.</p>
+                    </div>
+                </div>
+                
+                <!-- Step 5 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <span class="timeline-num">05</span>
+                    <div class="timeline-content glass-panel">
+                        <h3>5. Payment & rating completed</h3>
+                        <p>Traveler scans the secure simulated UPI QR code to pay, rates the helper's effort, and the helper instantly withdraws earnings.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- SERVICES PROVIDED --- -->
+    <section class="section section-alt" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge badge-primary">Comprehensive Care</span>
+                <h2>Helpline Services</h2>
+                <p>Support for the most common emergency breakdowns traveler faces during long highway drives.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-truck-monster"></i></div>
+                    <h3>Local Towing</h3>
+                    <p>Tow to the nearest highway repair safe point.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-gas-pump"></i></div>
+                    <h3>Towing to Pump</h3>
+                    <p>Tow your vehicle directly to the nearest petrol station.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                    <h3>Roadside Help</h3>
+                    <p>Jump-start batteries, fluid top-ups, or fuses.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-bucket"></i></div>
+                    <h3>Fuel Support</h3>
+                    <p>Procuring and delivering 5L of emergency petrol/diesel.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-gauge-high"></i></div>
+                    <h3>Tyre Change</h3>
+                    <p>Assistance in changing tyres using your stepney spare.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- PRICING SECTION --- -->
+    <section class="section" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge badge-success">Flat Rates</span>
+                <h2>Transparent & Affordable</h2>
+                <p>No arbitrary pricing, no price gouging in emergencies. Every helper operates under our standardized highway rescue rates.</p>
+            </div>
+            
+            <div class="pricing-layout">
+                <div class="pricing-info">
+                    <h3>Standardized Flat Fare</h3>
+                    <p>Toe Toe relies on absolute transparency. Stranded travelers pay an honest rate based on exact travel distance to keep operations fair.</p>
+                    
+                    <div class="pricing-metrics">
+                        <div class="pricing-metric-item">
+                            <div class="metric-circle">₹10</div>
+                            <div class="metric-details">
+                                <h4>Per Kilometer Travel Rate</h4>
+                                <p>Standardized fare to cover fuel and travel expenses of the active citizen helper.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="pricing-metric-item">
+                            <div class="metric-circle">25%</div>
+                            <div class="metric-details">
+                                <h4>Helper Earning Margin</h4>
+                                <p>Helpers receive a heavy 25% direct service commission, keeping them motivated.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Interactive Price Slider -->
+                <div class="calc-widget glass-panel">
+                    <h3 class="calc-title"><i class="fa-solid fa-calculator"></i> Fare Estimation Calculator</h3>
+                    
+                    <div class="calc-field">
+                        <div class="calc-label-row">
+                            <span>Estimated Distance</span>
+                            <span class="calc-val-display" id="calcDistanceText">5 km</span>
+                        </div>
+                        <input type="range" min="1" max="50" value="5" class="calc-range" id="pricingRange">
+                    </div>
+                    
+                    <div class="calc-results">
+                        <div class="calc-row">
+                            <span>Standard Helpline Fee</span>
+                            <span>₹150.00</span>
+                        </div>
+                        <div class="calc-row">
+                            <span>Distance Fare (₹10 / km)</span>
+                            <span id="calcDistanceFare">₹50.00</span>
+                        </div>
+                        <div class="calc-row">
+                            <span>Helper's Earning Share (25% + base)</span>
+                            <span id="calcHelperShare" style="color: var(--color-accent-green);">₹50.00</span>
+                        </div>
+                        <div class="calc-row total">
+                            <span>Total Estimated Price</span>
+                            <span class="calc-total-val" id="calcTotalFare">₹200.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- WHY TOE TOE MATTERS --- -->
+    <section class="section section-alt" id="why-matters">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge badge-primary">Key Focus Area</span>
+                <h2>Why Toe Toe Matters</h2>
+                <p>A national solution for a critical logistical and security gap on Indian highways.</p>
+            </div>
+            
+            <div class="matters-grid">
+                <div class="matter-card glass-panel">
+                    <span class="matter-number">01</span>
+                    <h3>Family Peace of Mind</h3>
+                    <p>No family will feel defenseless when stalled on deep state borders or isolated highway routes.</p>
+                </div>
+                <div class="matter-card glass-panel">
+                    <span class="matter-number">02</span>
+                    <h3>Safer Highways</h3>
+                    <p>Quick removal of stalled vehicles decreases high-speed highway collision rates and blockages.</p>
+                </div>
+                <div class="matter-card glass-panel">
+                    <span class="matter-number">03</span>
+                    <h3>Livelihood Potential</h3>
+                    <p>Provides a solid stream of secondary gig income for local rural youth and roadside dhaba owners.</p>
+                </div>
+                <div class="matter-card glass-panel">
+                    <span class="matter-number">04</span>
+                    <h3>Warm Community spirit</h3>
+                    <p>Restores human empathy on roads. Travelers helping travelers, fostering cooperative safety.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- VISION SECTION --- -->
+    <section class="section" id="vision">
+        <div class="container">
+            <div class="vision-banner">
+                <div class="vision-glow"></div>
+                <div class="vision-content">
+                    <span class="badge badge-primary" style="margin-bottom: 1rem;"><i class="fa-solid fa-compass"></i> National Mission</span>
+                    <h2>"Our mission is to make every Indian highway safer, connected, and stress-free."</h2>
+                    <p>We envision a scalable smart mobility ecosystem. As we scale across major state corridors, Toe Toe will integrate smart vehicle IoT sensors and EV highway helper squads to form India's most comprehensive community helpline.</p>
+                    
+                    <div class="vision-tags">
+                        <span class="vision-tag"><i class="fa-solid fa-check-circle"></i> Scalable Startup</span>
+                        <span class="vision-tag"><i class="fa-solid fa-bolt"></i> Future EV Charging Squads</span>
+                        <span class="vision-tag"><i class="fa-solid fa-map-location-dot"></i> Pan-India Expansion</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- THE DUAL SIMULATOR LAB PORTAL --- -->
+    <section class="section section-alt" id="simulator">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge badge-primary">Interactive Demo</span>
+                <h2>Highway Helpline Simulator</h2>
+                <p>Toggle and operate both sides of our ecosystem! Request assistance as a Traveler, and accept + navigate to the site as a Helper, observing our state machine live.</p>
+            </div>
+            
+            <div class="simulator-layout">
+                <!-- PANELS 1: TRAVELER DASHBOARD -->
+                <div class="sim-pane glass-panel" id="travelerPane">
+                    <div class="sim-pane-header">
+                        <h3><i class="fa-solid fa-user-tag" style="color: var(--color-primary);"></i> Traveler Portal</h3>
+                        <div class="user-tag">
+                            <div class="user-avatar-circle">T</div>
+                            <span id="travelerName">Ananya Roy</span>
+                        </div>
+                    </div>
+                    
+                    <div class="sim-pane-body" id="travelerDashboardBody">
+                        <!-- STATE 1: REQUEST FORM -->
+                        <div class="traveler-state-request" id="travelerStateRequest">
+                            <p style="font-size: 0.85rem; color: var(--color-text-secondary); margin-bottom: 1.25rem;">
+                                Simulating a stranded vehicle on NH-44 highway. Select your issue below:
+                            </p>
+                            
+                            <div class="issue-picker-grid">
+                                <div class="issue-card selected" data-issue="breakdown">
+                                    <i class="icon fa-solid fa-truck-monster"></i>
+                                    <h4>Breakdown</h4>
+                                </div>
+                                <div class="issue-card" data-issue="puncture">
+                                    <i class="icon fa-solid fa-screwdriver-wrench"></i>
+                                    <h4>Puncture</h4>
+                                </div>
+                                <div class="issue-card" data-issue="fuel">
+                                    <i class="icon fa-solid fa-bucket"></i>
+                                    <h4>Fuel Need</h4>
+                                </div>
+                            </div>
+                            
+                            <div class="location-box">
+                                <div class="location-row">
+                                    <div class="gps-dot-pulse"></div>
+                                    <div class="location-details">
+                                        <div class="loc-title">GPS Detected Highway Location</div>
+                                        <div class="loc-desc" id="travelerGpsCoords">NH-44 Corridor, Km 94.2 (Near Mathura)</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="est-box">
+                                <div class="est-row">
+                                    <span>Distance to Nearest Helper</span>
+                                    <span class="mock-val">3.4 km</span>
+                                </div>
+                                <div class="est-row">
+                                    <span>Helpline Flat Service Cost</span>
+                                    <span class="est-val-big" id="travelerEstCost">₹184.00</span>
+                                </div>
+                            </div>
+                            
+                            <button class="btn btn-danger" style="width: 100%;" id="btnSendSOS">
+                                <i class="fa-solid fa-triangle-exclamation"></i> Send SOS Helpline Alert
+                            </button>
+                        </div>
+                        
+                        <!-- STATE 2: ACTIVE TRACKING FLOW -->
+                        <div class="traveler-state-tracking" id="travelerStateTracking" style="display: none; width: 100%;">
+                            <div class="mock-card">
+                                <h4 style="margin-bottom: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
+                                    <span>Helpline SOS Alert</span>
+                                    <span class="badge badge-warning" id="travelerTrackStatus">Broadcasting</span>
+                                </h4>
+                                <p style="font-size: 0.8rem; color: var(--color-text-secondary);" id="travelerStatusLog">
+                                    Broadcasting emergency signal to nearby active citizens...
+                                </p>
+                            </div>
+                            
+                            <div class="mock-card" id="assignedHelperDetailsCard" style="display: none;">
+                                <div class="mock-row">
+                                    <span class="mock-label">Assigned Helper</span>
+                                    <span class="mock-val" id="assignedHelperName">Rahul Verma (Gig Partner)</span>
+                                </div>
+                                <div class="mock-row">
+                                    <span class="mock-label">Helper Mobile</span>
+                                    <span class="mock-val" style="color: var(--color-primary);">+91 98230 48291</span>
+                                </div>
+                                <div class="mock-row">
+                                    <span class="mock-label">Distance Away</span>
+                                    <span class="mock-val" id="assignedHelperDistance">3.4 km</span>
+                                </div>
+                            </div>
+                            
+                            <div class="safety-alert">
+                                <strong>Safety Warning:</strong> Remain inside your vehicle with hazard indicator light ON. Our verified partner is en route.
+                            </div>
+                            
+                            <button class="btn btn-outline btn-sm" id="btnCancelSOS" style="width: 100%;">Cancel Helpline Request</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- PANELS 2: INTERACTIVE GPS MAP -->
+                <div class="sim-pane map-canvas-container" id="mapPane">
+                    <div class="map-radar-header">
+                        <div class="map-hud-box">
+                            <span class="logo-dot" style="background: var(--color-accent-blue); box-shadow: 0 0 10px var(--color-accent-blue);"></span>
+                            <span>Live GPS Radar: Active</span>
+                        </div>
+                        
+                        <div class="map-hud-box" id="mapDistanceHud" style="display: none;">
+                            <i class="fa-solid fa-road" style="color: var(--color-primary);"></i>
+                            <span id="mapDistanceVal">Helper: 3.4 km away</span>
+                        </div>
+                    </div>
+                    
+                    <!-- SVG Interactive highway routing rendering inside this element -->
+                    <div class="live-map-canvas" id="liveMapCanvas">
+                        <!-- Custom Map Render is handled dynamically inside app.js -->
+                    </div>
+                    
+                    <!-- Sim state timeline bar bottom -->
+                    <div class="sim-overlay-panel glass-panel">
+                        <div class="status-timeline-bar">
+                            <div class="timeline-step-indicator active" id="stepIndicatorRequested"></div>
+                            <div class="timeline-step-indicator" id="stepIndicatorAccepted"></div>
+                            <div class="timeline-step-indicator" id="stepIndicatorEnRoute"></div>
+                            <div class="timeline-step-indicator" id="stepIndicatorAssistance"></div>
+                            <div class="timeline-step-indicator" id="stepIndicatorPayment"></div>
+                            <div class="timeline-step-indicator" id="stepIndicatorCompleted"></div>
+                        </div>
+                        
+                        <div class="sim-status-title">
+                            <span id="simStateLabel">System State: Idle</span>
+                            <span class="badge badge-primary" id="simStateBadge">STANDBY</span>
+                        </div>
+                        <div class="sim-status-desc" id="simStateDesc">Launch a Traveler SOS helpline request to begin the interactive flow.</div>
+                    </div>
+                    
+                    <!-- simulated UPI Scan QR Code Popup sheet overlay -->
+                    <div class="upi-payment-overlay" id="upiPaymentOverlay">
+                        <div class="upi-card glass-panel">
+                            <div class="upi-header">
+                                <div class="upi-logo-row">Toe Toe UPI Pay</div>
+                                <p style="font-size: 0.8rem; color: var(--color-text-secondary); margin: 0;">Scan to Pay Verified Helper</p>
+                            </div>
+                            
+                            <div class="upi-amount-display" id="upiAmountText">₹184.00</div>
+                            
+                            <div class="upi-qr-wrapper">
+                                <div class="upi-qr-scanner-line"></div>
+                                <i class="fa-solid fa-qrcode" style="font-size: 8rem; color: #111;"></i>
+                            </div>
+                            
+                            <div class="upi-apps-row">
+                                <button class="upi-app-btn" onclick="simPaymentFlow()">GPay</button>
+                                <button class="upi-app-btn" onclick="simPaymentFlow()">PhonePe</button>
+                                <button class="upi-app-btn" onclick="simPaymentFlow()">Paytm</button>
+                            </div>
+                            
+                            <button class="btn btn-primary btn-sm" style="width: 100%;" onclick="simPaymentFlow()">Simulate Instant Payment</button>
+                        </div>
+                        
+                        <div class="payment-success-anim" id="paymentSuccessAnim">
+                            <div class="check-circle"><i class="fa-solid fa-check"></i></div>
+                            <h3 style="color: #fff; margin-bottom: 0.5rem;">Payment Successful</h3>
+                            <p style="font-size: 0.85rem; color: var(--color-text-secondary); margin-bottom: 2rem;">Funds transferred to helper wallet securely.</p>
+                            <button class="btn btn-primary btn-sm" id="btnGoToRating">Continue to Rating</button>
+                        </div>
+                    </div>
+                    
+                    <!-- rating dialog overlay sheet -->
+                    <div class="rating-overlay" id="ratingOverlay">
+                        <div class="rating-card glass-panel">
+                            <h3 style="color: #fff; margin-bottom: 0.5rem;">Assistance Complete</h3>
+                            <p style="font-size: 0.85rem; color: var(--color-text-secondary);">Help Rahul Verma sustain their great highway rating. Rate your experience:</p>
+                            
+                            <div class="stars-row" id="starsContainer">
+                                <button class="star-btn" data-star="1"><i class="fa-solid fa-star"></i></button>
+                                <button class="star-btn" data-star="2"><i class="fa-solid fa-star"></i></button>
+                                <button class="star-btn" data-star="3"><i class="fa-solid fa-star"></i></button>
+                                <button class="star-btn" data-star="4"><i class="fa-solid fa-star"></i></button>
+                                <button class="star-btn" data-star="5"><i class="fa-solid fa-star"></i></button>
+                            </div>
+                            
+                            <button class="btn btn-primary btn-sm" style="width: 100%;" id="btnSubmitRating">Submit & Reset Simulator</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- PANELS 3: HELPER DASHBOARD -->
+                <div class="sim-pane glass-panel" id="helperPane">
+                    <div class="sim-pane-header">
+                        <h3><i class="fa-solid fa-motorcycle" style="color: var(--color-primary);"></i> Helper Portal</h3>
+                        <div class="user-tag">
+                            <div class="user-avatar-circle" style="background: var(--color-accent-green);">H</div>
+                            <span id="helperName">Rahul Verma</span>
+                        </div>
+                    </div>
+                    
+                    <div class="sim-pane-body" id="helperDashboardBody">
+                        <div>
+                            <div class="toggle-online-container">
+                                <div>
+                                    <h4 style="color: #fff; font-size: 0.95rem;" id="helperOnlineLabel">Active Safety Status</h4>
+                                    <p style="font-size: 0.75rem; color: var(--color-text-muted);" id="helperOnlineDesc">Toggle to receive emergency broadcasts</p>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox" id="helperToggleActive" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            
+                            <div class="helper-wallet-card">
+                                <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--color-text-secondary);">
+                                    <span>Wallet Earnings</span>
+                                    <span>Helper Rating</span>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                                    <div class="wallet-balance" id="helperWalletBalance">₹1,240.00</div>
+                                    <div style="font-size: 1rem; font-weight: 700; color: var(--color-accent-yellow);">
+                                        <i class="fa-solid fa-star"></i> <span id="helperRatingText">4.9</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- STREAM & ALERTS CONTAINER -->
+                        <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center;">
+                            <!-- NO JOBS STANDBY -->
+                            <div id="helperStandbyPanel" style="text-align: center; padding: 2rem 0;">
+                                <i class="fa-solid fa-radar" style="font-size: 2.5rem; color: var(--color-text-muted); margin-bottom: 1rem; display: block; animation: blink 2s infinite;"></i>
+                                <span style="font-size: 0.85rem; color: var(--color-text-secondary);" id="helperStandbyText">
+                                    Status: Active Online.<br>Scanning radar area for stranded travelers...
+                                </span>
+                            </div>
+                            
+                            <!-- INCOMING BROADCAST ALERT -->
+                            <div class="incoming-alert-card" id="incomingAlertCard" style="display: none;">
+                                <div class="alert-header">
+                                    <i class="fa-solid fa-circle-exclamation" style="animation: blink 1s infinite;"></i>
+                                    <span>INCOMING EMERGENCY HELPLINE ALERT</span>
+                                </div>
+                                <div class="alert-body-text">
+                                    A traveler is stranded at <strong>NH-44 Highway (Km 94.2)</strong> due to <strong>Puncture</strong>. Distance to traveler: <strong>3.4 km</strong>.
+                                </div>
+                                <div style="display: flex; gap: 0.5rem;">
+                                    <button class="btn btn-primary btn-sm" style="flex-grow: 1;" id="btnAcceptRequest">Accept Request</button>
+                                    <button class="btn btn-outline btn-sm" id="btnRejectRequest">Decline</button>
+                                </div>
+                            </div>
+                            
+                            <!-- HELPER EN ROUTE DIRECTIONS -->
+                            <div class="mock-card" id="helperNavigationPanel" style="display: none; border-color: var(--color-primary-glow-heavy);">
+                                <h4 style="color: #fff; margin-bottom: 0.5rem;"><i class="fa-solid fa-location-arrow" style="color: var(--color-primary);"></i> Dispatch Guide</h4>
+                                <div style="font-size: 0.85rem; margin-bottom: 0.75rem;">
+                                    <div class="mock-row"><span class="mock-label">Route:</span><span class="mock-val">NH-44 Mathura Exit North</span></div>
+                                    <div class="mock-row"><span class="mock-label">Directions:</span><span class="mock-val" style="color: var(--color-secondary);">Drive 3.4 km North to Km 94.2 milestone</span></div>
+                                </div>
+                                
+                                <div class="mock-pulse-bar" style="margin-bottom: 1.25rem;">
+                                    <div class="mock-pulse-bar-fill" id="helperNavProgressBar" style="width: 100%;"></div>
+                                </div>
+                                
+                                <button class="btn btn-primary btn-sm" style="width: 100%; display: none;" id="btnHelperDeliverHelp">Complete Assistance</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- AUTHENTICATION MODAL DIALOG --- -->
+    <div class="modal-overlay" id="authModal">
+        <div class="modal-container">
+            <div class="glass-panel modal-card">
+                <button class="modal-close" id="btnModalClose">&times;</button>
+                
+                <div class="modal-tabs">
+                    <button class="modal-tab-btn active" id="tabBtnLogin">Login</button>
+                    <button class="modal-tab-btn" id="tabBtnSignup">Sign Up</button>
+                </div>
+                
+                <!-- LOGIN FORM -->
+                <form id="formLogin">
+                    <div class="role-picker">
+                        <div class="role-option selected" id="roleOptionLoginTraveler">
+                            <span class="role-title">Traveler</span>
+                            <span class="role-sub">Need Assistance</span>
+                        </div>
+                        <div class="role-option" id="roleOptionLoginHelper">
+                            <span class="role-title">Helper</span>
+                            <span class="role-sub">Offer Safety</span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="loginEmail">Email / Phone Number</label>
+                        <input type="text" id="loginEmail" class="form-input" placeholder="e.g. travel@toetoe.in" required>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 2rem;">
+                        <label class="form-label" for="loginPass">Password</label>
+                        <input type="password" id="loginPass" class="form-input" placeholder="Enter Secure Password" required>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Login to Dashboard</button>
+                    
+                    <p class="form-footer-text">Don't have an account? <a href="#" class="form-link" id="linkToSignup">Create Account</a></p>
+                </form>
+                
+                <!-- SIGNUP FORM (HIDDEN BY DEFAULT) -->
+                <form id="formSignup" style="display: none;">
+                    <div class="role-picker">
+                        <div class="role-option selected" id="roleOptionSignupTraveler">
+                            <span class="role-title">Traveler</span>
+                            <span class="role-sub">Need Assistance</span>
+                        </div>
+                        <div class="role-option" id="roleOptionSignupHelper">
+                            <span class="role-title">Helper</span>
+                            <span class="role-sub">Offer Safety</span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="signupName">Full Name</label>
+                        <input type="text" id="signupName" class="form-input" placeholder="e.g. Amit Sharma" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="signupEmail">Email Address</label>
+                        <input type="email" id="signupEmail" class="form-input" placeholder="e.g. travel@toetoe.in" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="signupPhone">Phone Number (Aadhaar KYC linked)</label>
+                        <input type="tel" id="signupPhone" class="form-input" placeholder="e.g. 98765 43210" required>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 2rem;">
+                        <label class="form-label" for="signupPass">Create Password</label>
+                        <input type="password" id="signupPass" class="form-input" placeholder="Enter Secure Password" required>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Register & Do Aadhaar KYC</button>
+                    
+                    <p class="form-footer-text">Already registered? <a href="#" class="form-link" id="linkToLogin">Login Instead</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- --- FOOTER --- -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <a href="#" class="logo" style="margin-bottom: 1.5rem;">
+                        TOE TOE<span class="logo-dot"></span>
+                    </a>
+                    <p>A national socio-economic highway safety helpline connecting stranded vehicle owners to verified, motivated nearby citizens instantly. Dedicated to secure journeys across India.</p>
+                    <span class="footer-tagline">“Because no one should feel stranded.”</span>
+                </div>
+                
+                <div class="footer-links-col">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#problem">The Problem</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#helpers">Our Helpers</a></li>
+                        <li><a href="#simulator">Interactive Simulator</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-col">
+                    <h4>Support & Trust</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Safety & KYC Verification</a></li>
+                        <li><a href="#">Terms & Privacy Policies</a></li>
+                        <li><a href="#">FAQ & Help Center</a></li>
+                        <li><a href="#pricing">Helpline Flat Rates</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Emergency Helpline</h4>
+                    
+                    <div class="hotline-card">
+                        <div class="hotline-icon"><i class="fa-solid fa-phone-volume"></i></div>
+                        <div class="hotline-details">
+                            <h5>TOE TOE National Support</h5>
+                            <p>1800-309-8638</p>
+                        </div>
+                    </div>
+                    
+                    <div style="font-size: 0.8rem; color: var(--color-text-muted);">
+                        For standard police or ambulance services, dial 112 immediately.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Toe Toe Roadside Safety Systems Pvt Ltd. All Rights Reserved.</p>
+                <p style="color: var(--color-text-muted);">Made for Highway Travelers & safety minded Citizens across India.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Core Engine Controller -->
+    <script src="app.js"></script>
+</body>
+</html>
